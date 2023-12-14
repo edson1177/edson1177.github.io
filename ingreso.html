@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Ingreso</title>
+</head>
+<body>
+    <header id="Header">
+        <div class="container">
+          <div class="subcontainer">
+            <nav class="navbar">
+              <a href="#" class="nav-branding">OTUR.</a>
+              <ul class="nav-menu">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link">INICIO</a>
+                  <!--<ul class="submenu">
+                          <li><a href="#">Quienes somos</a></li>
+                          <li><a href="#">Como funciona</a></li>
+                      </ul> -->
+    
+                </li>
+    
+                <li class="nav-item">
+                  <a href="indicadores.html"  class="nav-link">INDICADORES</a>
+                </li>
+    
+                <!--<li class="nav-item">
+                  <a href="encuesta.html"  class="nav-link">ENCUESTAS</a>
+                </li> -->
+    
+                 <li class="nav-item">
+                  <a href="ingreso.html"  class="nav-link">CARGA DE INFORMACION</a>
+                </li> 
+    
+                <li class="nav-item">
+                  <a href="ingreso.html"  class="nav-link"> CREAR FORMULARIOS</a>
+                </li>
+    
+                <li class="nav-item">
+                  <a href="contacto.html"  class="nav-link">CONTACTO</a>
+                </li>
+    
+               
+    
+              </ul>
+    
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+    <div class="centrar">
+        <form id="loginForm">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required>
+    
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+    
+            <button type="button" onclick="login()">Iniciar sesión</button>
+        </form>
+    </div>
+    
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Aquí puedes agregar la lógica de autenticación
+            // Por ejemplo, puedes comparar con usuarios y contraseñas predefinidos
+            // Este es solo un ejemplo básico y no se debe usar en un entorno de producción
+
+            if (username === "ADMIN" && password === "ADMIN") {
+                
+                window.location.href = "formularios.html";
+            } else {
+                alert("Nombre de usuario o contraseña incorrectos. Inténtalo de nuevo.");
+            }
+        }
+    </script>
+</body>
+</html>

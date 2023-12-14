@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>ENCUESTA</title>
+  </head>
+  <body>
+
+    <header id="Header">
+      <div class="container">
+        <div class="subcontainer">
+          <nav class="navbar">
+            <a href="#" class="nav-branding">OTUR.</a>
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">INICIO</a>
+                <!--<ul class="submenu">
+                        <li><a href="#">Quienes somos</a></li>
+                        <li><a href="#">Como funciona</a></li>
+                    </ul> -->
+  
+              </li>
+  
+              <li class="nav-item">
+                <a href="indicadores.html"  class="nav-link">INDICADORES</a>
+              </li>
+  
+              <!--<li class="nav-item">
+                <a href="encuesta.html"  class="nav-link">ENCUESTAS</a>
+              </li> -->
+  
+               <li class="nav-item">
+                <a href="ingreso.html"  class="nav-link">CARGA DE INFORMACION</a>
+              </li> 
+  
+              <li class="nav-item">
+                <a href="ingreso.html"  class="nav-link"> CREAR FORMULARIOS</a>
+              </li>
+  
+              <li class="nav-item">
+                <a href="contacto.html"  class="nav-link">CONTACTO</a>
+              </li>
+  
+             
+  
+            </ul>
+  
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+   
+    <main class="content">
+      <div class="container2">
+        <form action="#" method="post">
+          <h3>Encuesta</h3>
+          <div class="input-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="input-group">
+            <p>¿De dónde nos visita?​</p>
+          <input type="radio" name="sector" value="sector publico" /> Sector publico<br />
+          <input type="radio" name="sector" value="sector privado" /> Sector privado<br />
+          <input type="radio" name="sector" value="sector Académico" /> Sector Académico<br />
+          </div>
+
+          <div class="input-group">
+            <p>¿Qué le pareció la información consultada?</p>
+          <input type="radio" name="opinion" value="Excelente" /> Excelente<br />
+          <input type="radio" name="opinion" value="Buena" /> Buena<br />
+          <input type="radio" name="opinion" value="Regular" /> Regular<br />
+          <input type="radio" name="opinion" value="Mala" /> Mala<br />
+          <input type="radio" name="opinion" value="Muy mala" /> Muy mala<br />
+          </div>
+
+          <div class="input-group">
+            <label for="mensaje">Comentarios:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+      
+    </main>
+    <footer>
+      <p>&copy; 2023. Todos los derechos reservados.</p>
+      <p>
+  
+        Carretera Federal Veracruz-Xalapa Km. 13.5 Colonia El Castillo Veracruz, Veracruz México
+      </p>
+      <p>
+  
+        Veracruz ver, Veracruz
+  
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

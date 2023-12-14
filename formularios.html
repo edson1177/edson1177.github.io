@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>ACERCA DE</title>
+</head>
+<body>
+  <header id="Header">
+    <div class="container">
+      <div class="subcontainer">
+        <nav class="navbar">
+          <a href="#" class="nav-branding">OTUR.</a>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">INICIO</a>
+              <!--<ul class="submenu">
+                      <li><a href="#">Quienes somos</a></li>
+                      <li><a href="#">Como funciona</a></li>
+                  </ul> -->
+
+            </li>
+
+            <li class="nav-item">
+              <a href="indicadores.html"  class="nav-link">INDICADORES</a>
+            </li>
+
+            <!--<li class="nav-item">
+              <a href="encuesta.html"  class="nav-link">ENCUESTAS</a>
+            </li> -->
+
+             <li class="nav-item">
+              <a href="ingreso.html"  class="nav-link">CARGA DE INFORMACION</a>
+            </li> 
+
+            <li class="nav-item">
+              <a href="ingreso.html"  class="nav-link"> CREAR FORMULARIOS</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="contacto.html"  class="nav-link">CONTACTO</a>
+            </li>
+
+           
+
+          </ul>
+
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+    
+   <main class="content">
+    <h>Crear Formularios</h>
+    <div id="botonesContainer">
+        <button onclick="crearCajaTexto()">Crear Caja de Texto</button>
+        <button onclick="crearTresRadioButton()">Crear Tres Radio Buttons</button>
+        <button onclick="crearComboBox()">Crear Combo Box</button>
+        <button onclick="nuevoFormulario()">Nuevo Formulario</button>
+      </div>
+    
+      <div id="elementosContainer"></div>
+    
+      <script>
+        function crearCajaTexto() {
+          const elementosContainer = document.getElementById('elementosContainer');
+          
+          const preguntaInput = document.createElement('input');
+          preguntaInput.type = 'text';
+          preguntaInput.placeholder = 'Pregunta';
+          preguntaInput.className = 'elemento';
+    
+          const cajaTexto = document.createElement('input');
+          cajaTexto.type = 'text';
+          cajaTexto.placeholder = 'Caja de Texto';
+          cajaTexto.className = 'elemento';
+    
+          elementosContainer.appendChild(preguntaInput);
+          elementosContainer.appendChild(cajaTexto);
+        }
+    
+        function crearTresRadioButton() {
+          const elementosContainer = document.getElementById('elementosContainer');
+          
+          const preguntaInput = document.createElement('input');
+          preguntaInput.type = 'text';
+          preguntaInput.placeholder = 'Pregunta';
+          preguntaInput.className = 'elemento';
+    
+          elementosContainer.appendChild(preguntaInput);
+    
+          for (let i = 0; i < 3; i++) {
+            const radioButton = document.createElement('input');
+            radioButton.type = 'radio';
+            radioButton.name = 'grupoRadio'; 
+            radioButton.className = 'elemento';
+    
+            const label = document.createElement('label');
+            label.innerHTML = 'Radio Button ' + (i + 1);
+            label.className = 'elemento';
+    
+            elementosContainer.appendChild(radioButton);
+            elementosContainer.appendChild(label);
+          }
+        }
+    
+        function crearComboBox() {
+          const elementosContainer = document.getElementById('elementosContainer');
+          
+          const preguntaInput = document.createElement('input');
+          preguntaInput.type = 'text';
+          preguntaInput.placeholder = 'Pregunta';
+          preguntaInput.className = 'elemento';
+    
+          const comboBox = document.createElement('select');
+          comboBox.className = 'elemento';
+    
+          for (let i = 1; i <= 3; i++) {
+            const option = document.createElement('option');
+            option.value = 'Opción ' + i;
+            option.text = 'Opción ' + i;
+            comboBox.appendChild(option);
+          }
+    
+          elementosContainer.appendChild(preguntaInput);
+          elementosContainer.appendChild(comboBox);
+        }
+    
+        function nuevoFormulario() {
+          const elementosContainer = document.getElementById('elementosContainer');
+          elementosContainer.innerHTML = ''; // Limpiar el contenido actual
+        }
+      </script>
+    
+   </main>
+
+   
+   <script src="script.js"></script>
+</body>
+</html>
